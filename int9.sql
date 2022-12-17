@@ -1,6 +1,8 @@
 .mode columns
 .headers on
 
+/* média de diferenca entre as percentagens de lotacao dos estadios nos jogos de uma equipa quando esta é visitada vs quando joga fora*/
+
 select visitante.n as NOME, round(avg(VISITADA.aux) - avg(VISITANTE.aux), 2) ASSISTENCIA_CASA_VS_FORA
 from (
         select CLUBE.nome as n, JOGO.assistencia * 100.0 / ESTADIO.lotacao as aux
