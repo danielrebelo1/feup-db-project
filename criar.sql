@@ -55,7 +55,7 @@ CREATE TABLE JOGADOR (
 	pePreferido	TEXT,
 	jogadorDesde	DATE,
 	fimContrato	DATE,
-	valorMercado	TEXT,
+	valorMercado	REAL,
 	numeroCamisola	TEXT,
 	nacionalidade	TEXT,
 	posicao	TEXT,
