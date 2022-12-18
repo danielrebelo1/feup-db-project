@@ -21,7 +21,7 @@ CREATE TABLE ESTADIO (
 CREATE TABLE CLUBE (
 	idClube	INTEGER NOT NULL UNIQUE,
 	nome	TEXT NOT NULL UNIQUE,
-	anoFundacao	TEXT,
+	anoFundacao	DATE,
 	idEstadio	INTEGER NOT NULL,
 	PRIMARY KEY(idClube)
 	FOREIGN KEY(idEstadio) REFERENCES ESTADIO(idEstadio)
@@ -30,7 +30,7 @@ CREATE TABLE CLUBE (
 CREATE TABLE TREINADOR (
 	idTreinador	INTEGER NOT NULL UNIQUE,
 	nome	TEXT NOT NULL ,
-	dataNascimento	TEXT,
+	dataNascimento	DATE,
 	nacionalidade	TEXT,
 	idClube	INTEGER NOT NULL UNIQUE,
 	PRIMARY KEY(idTreinador),
@@ -40,7 +40,7 @@ CREATE TABLE TREINADOR (
 CREATE TABLE PRESIDENTE (
 	idPresidente	INTEGER NOT NULL UNIQUE,
 	nomePresidente	TEXT NOT NULL ,
-	dataNascimento	TEXT,
+	dataNascimento	DATE,
 	nacionalidade	TEXT,
 	idClube	INTEGER NOT NULL UNIQUE,
 	PRIMARY KEY(idPresidente),
@@ -53,8 +53,8 @@ CREATE TABLE JOGADOR (
 	idade	TEXT,
 	altura	TEXT,
 	pePreferido	TEXT,
-	jogadorDesde	TEXT,
-	fimContrato	TEXT,
+	jogadorDesde	DATE,
+	fimContrato	DATE,
 	valorMercado	TEXT,
 	numeroCamisola	TEXT,
 	nacionalidade	TEXT,
@@ -77,7 +77,7 @@ CREATE TABLE JORNADA (
 
 CREATE TABLE JOGO (
 	idJogo	INTEGER NOT NULL UNIQUE,
-	dataJogo	TEXT,
+	dataJogo	DATE,
 	horaJogo	TEXT,
 	assistencia	INTEGER,
 	idArbitro	INTEGER NOT NULL,
