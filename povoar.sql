@@ -348,7 +348,7 @@ INSERT INTO JOGADOR VALUES (266,'Marlon','1990-02-26','1,75m','direito','2022-04
 INSERT INTO JOGADOR VALUES (267,'Gabriel Tota','2001-10-29','1,86m','direito','2022-01-27','2025-12-31','0.300 M ','88','Brasil','M',12);
 INSERT INTO JOGADOR VALUES (268,'Rmulo','2000-03-01','1,82m','direito','2022-01-28','2022-12-31','0.200 M ','32','Brasil','M',12);
 INSERT INTO JOGADOR VALUES (269,'Kelvi','2002-10-17','1,87m',NULL,NULL,NULL,NULL,NULL,'Brasil','M',12);
-INSERT INTO JOGADOR VALUES (270,'Oscar Ruiz','1991-05-14','1,68m','esquerdo','2022-04-01',NULL,'0.500 M ','11','Paraguai','MEsquerdo',12);
+INSERT INTO JOGADOR VALUES (270,'Oscar Ruiz','1991-05-14','1,68m','esquerdo','2022-04-01',NULL,'0.500 M ','11','Paraguai','M',12);
 INSERT INTO JOGADOR VALUES (271,'Bruno Nazario','1995-02-09','1,78m','esquerdo','2022-07-18','2022-12-31','0.800 M ','22','Brasil','M',12);
 INSERT INTO JOGADOR VALUES (272,'Bruninho','2000-04-27','1,75m','direito','2021-05-28','2022-12-31','0.600 M ',NULL,'Brasil','M',12);
 INSERT INTO JOGADOR VALUES (273,'Chico','1991-05-16','1,75m','direito','2021-04-19','2022-12-31','0.600 M ','23','Coreia do Sul','M',12);

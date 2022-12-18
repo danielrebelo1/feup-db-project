@@ -4,8 +4,8 @@
 
 /* melhores marcadores - feita */
 
-select jogador.nome , count(*) as GOLOS 
-from golo join jogador on golo.idMarcador = jogador.idJogador join jogo on golo.idJogo = jogo.idJogo 
-group by 1 
+select jogador.nome , count(*) AS GOLOS 
+from golo join jogador on golo.idMarcador = jogador.idJogador join jogo on golo.idJogo = jogo.idJogo
+group by jogador.idJogador
 having GOLOS >= 10
-order by 2 desc , 1 asc
+order by 2 desc

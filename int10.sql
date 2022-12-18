@@ -2,6 +2,8 @@
 .headers on
 .nullvalue NULL
 
+/* listagem dos jogos decididos em tempo compensação, ordenacao por data */
+
 select DATA, VISITADA, GOLOS_VISITADA, GOLOS_VISITANTE, VISITANTE
 from
     (
