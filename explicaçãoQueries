@@ -1,0 +1,21 @@
+Queries
+
+1) Obtenção das listagem de todos os estádios ordenados por ano de fundação de clube. Em caso de empate, são ordenados por ordem alfabética do seu nome.
+
+2) Obtenção das três equipas do campeonato que possuem os três melhores ataques e defesa do campeonato (?)
+
+3) Obtenção de todos os jogos que foram realizados no mês de abril
+
+4) Obtenção de um histograma, onde serão representados quantos golos foram marcados ao longo de todo o campeonato em cada minuto.
+
+5) Obtenção do valor de mercado total de cada uma das equipas do campeonato bem como a média do valor de mercado de um jogador de uma equipa em específico. Ordenação decrescente de acordo com o valor total do plantel e, em caso de empate, por o valor médio de um jogador do plantel.
+
+6) Obtenção da percentagem de golos marcados nos minutos de prolongamento em relação aos golos totais marcados por essa mesma equipa. Ordenação feita por ordem decrescente dessa mesma percentagem e, em caso de empate, por ardem alfabética do nome da equipa. 
+
+7) Listagem dos melhores marcadores do campeonato, ordenada por ordem decrescente de golos.
+
+8) Listagem dos jogadores da equipa do campeonato que possui o presidente mais velho e com mais de 1.75m de altura.
+
+9) Obtenção da diferença entre as percentagens média, de cada uma das equipas do campeonato, dos jogos realizados em casa dessa mesma equipa ou fora.
+
+10) Listagem dos jogos decididos nos minutos de compensação. Ordenação feita por a data de realização do jogo.
