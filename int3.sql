@@ -2,7 +2,7 @@
 .headers on
 .nullvalue NULL
 
-/* listar todos os jogos em abril */ 
+-- listar todos os jogos em abril  
 
 select c1.nome , c2.nome , DIA
 from clube c1 , clube c2 , 

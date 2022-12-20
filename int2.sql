@@ -2,7 +2,7 @@
 .headers on
 .nullvalue NULL
 
-/* equipas que estejam no top 3 melhores ataques e top 3 melhores defesas */
+-- equipas que estejam no top 3 melhores ataques e top 3 melhores defesas 
 select nome 
 from (select CLUBE.NOME as nome , count(*) as GOLOS_MARCADOS from clube, GOLO, JOGADOR where golo.idMarcador = JOGADOR.idJogador and JOGADOR.idCLUBE = CLUBE.idClube group by 1
 order by 2 desc
