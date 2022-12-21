@@ -1,3 +1,9 @@
+.mode columns
+.headers on
+.nullvalue NULL
+
+/* Tabela de classificações das equipas após as 38 jornadas, com informação relativa ao número de vitorias, empates e derrotas */
+
 SELECT EQUIPA, (VITORIAS_VISITADA + VITORIAS_VISITANTE) VITORIAS, (EMPATES_VISITADA + EMPATES_VISITANTE) EMPATES, 
 		38 - VITORIAS_VISITADA - VITORIAS_VISITANTE - EMPATES_VISITADA - EMPATES_VISITANTE DERROTAS, (PONTUACAO_VISITADA + PONTUACAO_VISITANTE) PONTUACAO
 FROM (
