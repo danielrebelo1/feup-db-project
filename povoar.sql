@@ -391,8 +391,8 @@ INSERT INTO JOGADOR VALUES (309,'Jose Welison','1995-03-11','1,77m','direito','2
 INSERT INTO JOGADOR VALUES (310,'Fabricio Baiano','1992-06-13','1,77m','direito','2022-07-20','2024-07-31','0.450 ','27','Brasil','M',10);
 INSERT INTO JOGADOR VALUES (311,'Hercules','2000-10-20','1,78m','direito','2022-02-01','2024-12-31',NULL,'35','Brasil','M',10);
 INSERT INTO JOGADOR VALUES (312,'Caio Alexandre','1999-02-24','1,74m','direito','2022-08-15','2022-12-31','3.50 ','8','Brasil','M',10);
-INSERT INTO JOGADOR VALUES (313,'Yago Pikachu','1992-06-05','1,68m','direito','2021-03-19','2024-12-31','1.80 ',NULL,'Brasil','MDireito',10);
-INSERT INTO JOGADOR VALUES (314,'Lucas Crispim','1994-04-19','1,78m','direito','2021-03-02','2022-12-31','2.50 ','10','Brasil','MEsquerdo',10);
+INSERT INTO JOGADOR VALUES (313,'Yago Pikachu','1992-06-05','1,68m','direito','2021-03-19','2024-12-31','1.80 ',NULL,'Brasil','M',10);
+INSERT INTO JOGADOR VALUES (314,'Lucas Crispim','1994-04-19','1,78m','direito','2021-03-02','2022-12-31','2.50 ','10','Brasil','M',10);
 INSERT INTO JOGADOR VALUES (315,'Matheus Vargas','1996-06-18','1,81m','direito','2019-09-13','2023-12-31','1.50 ','20','Brasil','M',10);
 INSERT INTO JOGADOR VALUES (316,'Romulo Otero','1992-11-09','1,65m','direito','2022-07-02','2022-12-31','1.50 ','80','Venezuela','M',10);
 INSERT INTO JOGADOR VALUES (317,'Lucas Lima','1990-07-09','1,76m','esquerdo','2021-08-25','2022-12-31','1.10 ','13','Brasil','M',10);
@@ -448,7 +448,7 @@ INSERT INTO JOGADOR VALUES (366,'Bruno Silva','1986-08-03','1,82m','direito','20
 INSERT INTO JOGADOR VALUES (367,'Jean Cleber','1990-04-29','1,80m','direito','2021-06-22','2022-12-31','0.200 ','16','Brasil','M',20);
 INSERT INTO JOGADOR VALUES (368,'Eduardo','1997-01-09','1,78m','direito','2022-01-19','2023-12-31','0.150 ','22','Brasil','M',20);
 INSERT INTO JOGADOR VALUES (369,'Marcos Serrato','1994-02-08','1,75m','direito','2021-03-16','2022-12-31','0.200 ',NULL,'Brasil','M',20);
-INSERT INTO JOGADOR VALUES (370,'Renato','1990-01-19','1,81m','direito','2020-06-20','2022-11-30','0.200 ','7','Brasil','MDireito',20);
+INSERT INTO JOGADOR VALUES (370,'Renato','1990-01-19','1,81m','direito','2020-06-20','2022-11-30','0.200 ','7','Brasil','M',20);
 INSERT INTO JOGADOR VALUES (371,'Jean Pyerre','1998-05-07','1,83m','direito','2022-04-11','2022-11-30','5.00 ','21','Brasil','M',20);
 INSERT INTO JOGADOR VALUES (372,'Vinicius Leite','1993-10-25','1,75m','ambos','2020-11-12','2022-11-30','0.250 ',NULL,'Brasil','M',20);
 INSERT INTO JOGADOR VALUES (373,'Gustavo Poffo','1998-02-10',NULL,NULL,'2020-01-10',NULL,NULL,NULL,'Brasil','M',20);
@@ -556,7 +556,7 @@ INSERT INTO JOGADOR VALUES (474,'Gabriel Sara','1999-06-26','1,77m','esquerdo','
 INSERT INTO JOGADOR VALUES (475,'Rodrigo Nestor','2000-08-09','1,75m','esquerdo','2020-02-03','2024-12-31','6.00 ','25','Brasil','M',16);
 INSERT INTO JOGADOR VALUES (476,'Talles Costa','2002-08-02','1,76m','direito','2021-03-01','2024-12-31','1.20 ','37','Brasil','M',16);
 INSERT INTO JOGADOR VALUES (477,'Rodriguinho','2004-03-16','1,85m','direito','2022-07-07','2026-12-31',NULL,'18','Brasil','M',16);
-INSERT INTO JOGADOR VALUES (478,'Patrick','1992-07-29','1,76m','esquerdo','2022-01-08','2023-12-31','3.50 ','88','Brasil','MEsquerdo',16);
+INSERT INTO JOGADOR VALUES (478,'Patrick','1992-07-29','1,76m','esquerdo','2022-01-08','2023-12-31','3.50 ','88','Brasil','M',16);
 INSERT INTO JOGADOR VALUES (479,'Igor Gomes','1999-03-17','1,83m','direito','2019-01-01','2023-03-30','7.00 ','26','Brasil','M',16);
 INSERT INTO JOGADOR VALUES (480,'Nikao','1992-07-29','1,74m','esquerdo','2022-01-11','2025-12-31','4.00 ','10','Brasil','M',16);
 INSERT INTO JOGADOR VALUES (481,'Andre Anderson','1999-09-23','1,80m','direito','2022-04-11','2023-06-30','1.70','28','Italia','M',16);
@@ -604,7 +604,7 @@ INSERT INTO JOGADOR VALUES (522,'Arthur','2003-03-17','1,73m','direito',NULL,NUL
 INSERT INTO JOGADOR VALUES (523,'Ze Ricardo','1996-03-09','1,76m','direito',NULL,'2022-12-31','1.40 ','5','Brasil','M',1);
 INSERT INTO JOGADOR VALUES (524,'Lucas Kal','1996-03-16','1,86m','direito','2022-01-07','2024-06-30','1.40 ','21','Brasil','M',1);
 INSERT INTO JOGADOR VALUES (525,'Juninho','1987-10-23','1,73m','direito','2017-02-06','2023-12-31','0.500 ','8','Brasil','M',1);
-INSERT INTO JOGADOR VALUES (526,'Flavio','2000-06-15','1,80m','direito',NULL,'2022-12-31','0.200 ','16','Brasil','MEsquerdo',1);
+INSERT INTO JOGADOR VALUES (526,'Flavio','2000-06-15','1,80m','direito',NULL,'2022-12-31','0.200 ','16','Brasil','M',1);
 INSERT INTO JOGADOR VALUES (527,'Kevyn','2002-03-02','1,79m','direito',NULL,NULL,NULL,NULL,'Brasil','M',1);
 INSERT INTO JOGADOR VALUES (528,'Juninho Valoura','1986-03-20','1,72m','direito','2021-03-31','2022-11-30','0.500 ',NULL,'Brasil','M',1);
 INSERT INTO JOGADOR VALUES (529,'Gustavinho','2001-10-29','1,74m','esquerdo',NULL,'2022-12-31','0.200 ','18','Brasil','M',1);
@@ -660,7 +660,7 @@ INSERT INTO JOGADOR VALUES (578,'Leo Rafael','1988-06-19','1,75m','direito','202
 INSERT INTO JOGADOR VALUES (579,'Stiven Mendoza','1999-03-13','1,73m','direito',NULL,'2023-06-30',NULL,NULL,'Brasil','M',5);
 INSERT INTO JOGADOR VALUES (580,'Vitor Jacare','1996-03-13',NULL,'direito','2022-04-29','2022-12-31','3.00 ',NULL,'Brasil','M',5);
 INSERT INTO JOGADOR VALUES (581,'Joao Victor','1994-05-29',NULL,'direito','2020-01-09','2026-12-31','2.50 ','80','Brasil','M',5);
-INSERT INTO JOGADOR VALUES (582,'Lima','1981-07-20','1,80m','direito','2021-06-22','2022-12-31','2.00 ','10','Brasil','MEsquerdo',5);
+INSERT INTO JOGADOR VALUES (582,'Lima','1981-07-20','1,80m','direito','2021-06-22','2022-12-31','2.00 ','10','Brasil','M',5);
 INSERT INTO JOGADOR VALUES (583,'Jhon Vasquez','1986-07-27','1,72m','direito','2022-01-19',NULL,'1.50 ',NULL,'Brasil','M',5);
 INSERT INTO JOGADOR VALUES (584,'Erick','2000-07-09','1,78m','direito','2021-03-16','2022-11-30','1.50 ',NULL,'Brasil','M',5);
 INSERT INTO JOGADOR VALUES (585,'Gabriel Santos','1994-06-03','1,67m','direito','2020-06-20','2022-11-30','0.600 ','45','Brasil','M',5);
