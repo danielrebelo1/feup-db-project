@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS PRESIDENTE;
 DROP TABLE IF EXISTS TREINADOR;
 DROP TABLE IF EXISTS CLUBE;
 DROP TABLE IF EXISTS ESTADIO;
+DROP VIEW IF EXISTS RESULTADOS;
 
 CREATE TABLE ESTADIO (
 	idEstadio	INTEGER NOT NULL UNIQUE,
@@ -109,9 +110,49 @@ CREATE TABLE GOLO (
 	idAssistente	INTEGER,
 	idJogo	INTEGER NOT NULL,
 	FOREIGN KEY(idJogo) REFERENCES JOGO(idJogo),
-	FOREIGN KEY(idMarcador) REFERENCES JOGADOR(idJogador),
+	FOREIGN KEY(idMarcador) REFERENCES JOGADOR(idJogador) ON DELETE CASCADE,
 	PRIMARY KEY(idGolo),
-	FOREIGN KEY(idAssistente) REFERENCES JOGADOR(idJogador)
+	FOREIGN KEY(idAssistente) REFERENCES JOGADOR(idJogador) ON DELETE CASCADE
 );
+
+CREATE VIEW RESULTADOS AS 
+SELECT DATA, HORA, VISITADA, GOLOS_VISITADA, GOLOS_VISITANTE, VISITANTE
+FROM ( 
+        SELECT t1.idJogo, t1.dataJogo DATA, t1.horaJogo HORA, t1.nome VISITADA, (CASE WHEN t2.TMP IS NULL THEN 0 ELSE t2.TMP END) GOLOS_VISITADA
+        FROM (
+                SELECT *
+                FROM JOGO JOIN CLUBE
+                ON JOGO.idEquipaVisitada = CLUBE.idClube
+                ) as t1
+                LEFT JOIN 
+            (
+                SELECT *, COUNT(*) TMP
+                FROM JOGO JOIN GOLO JOIN JOGADOR JOIN CLUBE
+                ON JOGO.idJogo = GOLO.idJogo AND GOLO.idMarcador = JOGADOR.idJogador AND JOGADOR.idClube = CLUBE.idClube
+                WHERE idEquipaVisitada = JOGADOR.idClube
+                GROUP BY CLUBE.idClube, GOLO.idJogo
+                ) as t2
+        using(idJogo)
+        ) 
+JOIN
+     (
+        SELECT t1.idJogo, t1.nome VISITANTE, (CASE WHEN t2.TMP IS NULL THEN 0 ELSE t2.TMP END) GOLOS_VISITANTE
+        FROM (
+                SELECT *
+                FROM JOGO JOIN CLUBE
+                ON JOGO.idEquipaVisitante = CLUBE.idClube
+                ) as t1
+                LEFT JOIN 
+            (
+                SELECT *, COUNT(*) TMP
+                FROM JOGO JOIN GOLO JOIN JOGADOR JOIN CLUBE
+                ON JOGO.idJogo = GOLO.idJogo AND GOLO.idMarcador = JOGADOR.idJogador AND JOGADOR.idClube = CLUBE.idClube
+                WHERE idEquipaVisitante = JOGADOR.idClube
+                GROUP BY CLUBE.idClube, GOLO.idJogo
+                ) as t2
+        using(idJogo)
+        )
+USING(idJogo)
+ORDER BY 1, 2;
 
 COMMIT;
