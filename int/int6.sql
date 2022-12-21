@@ -2,7 +2,7 @@
 .headers on
 .nullvalue NULL
 
--- Listagem da percentagem de golos no prolongamento para cada equipa
+-- Listagem da percentagem de golos depois dos 90 para cada equipa
 
 select a.GolosProlongamento * 100/b.GolosTotais as result, a.nomeClube from 
 (select count(*) as GolosProlongamento, CLUBE.idClube as clubeID, CLUBE.nome as nomeClube from GOLO, JOGADOR, CLUBE where golo.idMarcador = JOGADOR.idJogador and JOGADOR.idClube = CLUBE.idClube and golo.minuto like '90+%' group by 2) as a, 

@@ -2,9 +2,43 @@
 .headers on
 .nullvalue NULL
 
--- listar todos os estadios ordenando por ano de fundacao do clube , desempate alfabetico
-
-select c.nome as NOME_CLUBE, anoFundacao as ANO_FUNDACAO , e.nome AS ESTADIO from clube c join estadio e using(idEstadio) 
-order by 2, 1;
-
+SELECT EQUIPA, (VITORIAS_VISITADA + VITORIAS_VISITANTE) VITORIAS, (EMPATES_VISITADA + EMPATES_VISITANTE) EMPATES, 
+		38 - VITORIAS_VISITADA - VITORIAS_VISITANTE - EMPATES_VISITADA - EMPATES_VISITANTE DERROTAS, (PONTUACAO_VISITADA + PONTUACAO_VISITANTE) PONTUACAO
+FROM (
+        SELECT EQUIPA, VITORIAS_VISITADA, EMPATES_VISITADA, (VITORIAS_VISITADA * 3 + EMPATES_VISITADA) PONTUACAO_VISITADA
+        FROM (
+                SELECT RESULTADOS.VISITADA EQUIPA, COUNT(*) VITORIAS_VISITADA
+                FROM RESULTADOS
+                WHERE GOLOS_VISITADA > GOLOS_VISITANTE
+                GROUP BY 1
+                ) 
+        JOIN
+             (
+                SELECT RESULTADOS.VISITADA EQUIPA, COUNT(*) EMPATES_VISITADA
+                FROM RESULTADOS
+                WHERE GOLOS_VISITADA = GOLOS_VISITANTE
+                GROUP BY 1
+                )
+        USING(EQUIPA)
+        )
+JOIN 
+     (
+        SELECT EQUIPA, VITORIAS_VISITANTE, EMPATES_VISITANTE, (VITORIAS_VISITANTE * 3 + EMPATES_VISITANTE) PONTUACAO_VISITANTE
+        FROM (
+                SELECT RESULTADOS.VISITANTE EQUIPA, COUNT(*) VITORIAS_VISITANTE
+                FROM RESULTADOS
+                WHERE GOLOS_VISITANTE > GOLOS_VISITADA
+                GROUP BY 1
+                ) 
+        JOIN
+             (
+                SELECT RESULTADOS.VISITANTE EQUIPA, COUNT(*) EMPATES_VISITANTE
+                FROM RESULTADOS
+                WHERE GOLOS_VISITANTE = GOLOS_VISITADA
+                GROUP BY 1
+                )
+        USING(EQUIPA)
+        )
+USING(EQUIPA)
+ORDER BY 2 DESC;
 
